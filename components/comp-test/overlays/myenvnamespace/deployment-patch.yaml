@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: comp-test
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: MY_FAKE_ENV_VAR
+          value: "100"
+        image: quay.io/redhat-appstudio-qe/spi-demos-rzzf-tenant/rsenvapp/comp-test@sha256:fa27dfd287cc82d2298d3f5926dcd994c7d02c1e48a2afed59f9f1e5b2f14b82
+        name: my-java-quarkus
+        resources: {}
+status: {}
